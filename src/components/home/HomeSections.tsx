@@ -66,7 +66,7 @@ function Photo({ src, label }: { src: string; label: string }) {
       {(src === "/images/projects/md%20home%20de.jpg" ||
         src.includes("/before") ||
         src.includes("/after") ||
-        (src === "/images/about-slides/slide-03.jpeg" || process.env.NEXT_PUBLIC_PROJECT_IMAGES === "true")) && !failed && (
+        (src.startsWith("/images/about-slides/") || process.env.NEXT_PUBLIC_PROJECT_IMAGES === "true")) && !failed && (
         <Image
           src={src}
           alt={label}
@@ -223,13 +223,26 @@ export default function HomeSections() {
           <Heading tag="DESIGN INSPIRATION" title="Featured Spaces" />
 
           <div className="hs-projects">
-            {["Living Spaces", "Luxury Bedroom", "Modern Kitchens"].map((name, i) => (
-              <Link href="/portfolio" key={name} className="hs-project-card">
+            {[
+  {
+    name: "Luxury Living Room",
+    image: "/images/about-slides/slide-08.jpeg"
+  },
+  {
+    name: "Luxury Bedroom",
+    image: "/images/about-slides/slide-03.jpeg"
+  },
+  {
+    name: "Luxury Crockery & Display Unit",
+    image: "/images/about-slides/slide-01.jpeg"
+  }
+].map((project) => (
+              <Link href="/portfolio" key={project.name} className="hs-project-card">
                 <Photo
-                  src={i === 1 ? "/images/about-slides/slide-03.jpeg" : `/images/projects/project${i + 1}.webp`}
-                  label={name}
+                  src={project.image}
+                  label={project.name}
                 />
-                <h3>{name} <ArrowRight size={18} /></h3>
+                <h3>{project.name} <ArrowRight size={18} /></h3>
               </Link>
             ))}
           </div>
