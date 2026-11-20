@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -35,12 +36,7 @@ export default function Header() {
       <header className="fh-wrapper">
         <div className="fh-bar">
           <Link href="/" className="fh-brand" aria-label="MD Home Decore home" onClick={closeMenus}>
-            <span className="flex h-[46px] w-[46px] shrink-0 items-center justify-center overflow-hidden rounded-xl border border-white/20 bg-gradient-to-br from-[#E0C093] to-[#8C6337] shadow-lg">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white" aria-hidden="true">
-                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                <path d="M9 22V12h6v10" />
-              </svg>
-            </span>
+            <Image src="/images/md-home-decore-logo.jpg" alt="MD Home Decor Logo" width={52} height={52} className="md-site-logo" />
             <span className="fh-brand-text">
               <span className="fh-brand-name">MD HOME <span>DECORE</span></span>
               <span className="fh-brand-tagline">INTERIORS &amp; LIFESTYLE</span>

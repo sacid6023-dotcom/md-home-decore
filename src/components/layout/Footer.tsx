@@ -60,16 +60,7 @@ export default async function Footer() {
       <div className="footer-main">
         <div className="footer-brand">
           <Link href="/" className="brand footer-logo">
-            <span className="brand-mark" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg"
-                width="26" height="26"
-                viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" strokeWidth="1.7"
-                strokeLinecap="round" strokeLinejoin="round">
-                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                <path d="M9 22V12h6v10" />
-              </svg>
-            </span>
+            <Image src="/images/md-home-decore-logo.jpg" alt="MD Home Decor Logo" width={52} height={52} className="md-site-logo" />
 
             <span className="brand-copy">
               <span className="brand-name">
