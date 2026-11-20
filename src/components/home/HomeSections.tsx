@@ -1,5 +1,6 @@
 "use client";
 
+import AboutSlideshow from "./AboutSlideshow";
 import { useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -104,10 +105,7 @@ export default function HomeSections() {
       {/* ABOUT */}
       <section className="hs-section">
         <div className="hs-container hs-about">
-          <Photo
-            src="/images/projects/md%20home%20de.jpg"
-            label="Our Interior Designs"
-          />
+          <AboutSlideshow />
           <div>
             <Heading tag="WHO WE ARE" title="Spaces That Tell Your Story." />
             <p>
